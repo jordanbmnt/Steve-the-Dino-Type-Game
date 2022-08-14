@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lets Play!</title>
+</head>
+<body>
+    <div class="mainImg"></div>
+    <div class="welcome">
+        <div id="typed-strings">
+            <p>Hola Mi Amigos!</p>
+            <p>Welcome Friends!</p>
+        </div>
+        <span id="typed"></span>
+        <h5> To my Steve The Dino Parody</h5>
+        <a href="/steveTheDino.html"><button>Start</button></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    let typed = new Typed('#typed', {
+    stringsElement: '#typed-strings',
+    typeSpeed: 50,
+    backSpeed: 50,
+    loop: true,
+    loopCount: Infinity,
+    backDelay: 300,
+    smartBackspace: true,
+    showCursor: false
+  });
+</script>
+</body>
+</html>
