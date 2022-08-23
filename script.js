@@ -9,6 +9,7 @@ let cactusLeft = parseInt(
     window.getComputedStyle(cactus).getPropertyValue("left")
 );
 
+
 function jump() {
     if (dino.classList != "jump") {
         dino.classList.add("jump");

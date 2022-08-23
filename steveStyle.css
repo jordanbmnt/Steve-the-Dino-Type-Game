@@ -1,13 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&family=Silkscreen&display=swap');
 
+body{
+    background-color: #000a0f;
+}
+
 .game{
-    width: 600px;
+    width: 700px;
     height: 200px;
     border: 1px solid black;
     margin: auto;
     overflow: hidden;
+    overflow-x: hidden;
     background-image: url(/images/stars.jpg);
+    background-color: #000a0f;
     background-size: contain;
+    border-radius: 13px;
+}
+
+hr{
+    z-index: 1;
+    background-color: #393833;
+    border: solid 1px #393833;
+    border-top: solid 4px #515049;
+    position: absolute;
+    top: 150px;
+    width: 700px;
+    height: 50px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
 }
 
  
@@ -15,23 +35,19 @@
 #dino{
     width: 50px;
     height: 50px;
-    /* background-color: #020202; */
-    /* border: 7px solid #109cdd; */
     border-radius: 50%;
     position: relative;
     top: 136px;
     margin-left: 5px;
-    /* box-shadow: 0px 0px 10px 0px #109cdd,
-    0px 0px 14px 2px #1273a08d,
-    0px 0px 16px 5px #1273a08d; */
     z-index: 2;
 }
 
 #char{
+    z-index: 3;
     width: 50px;
     height: 50px;
     background-size: contain;
-    animation: wheelchairMoves 0.4s infinite linear;
+    animation: wheelchairMoves 0.3s infinite linear;
     transform: skew(3deg);
 }
 
@@ -61,14 +77,29 @@
 
 
 @keyframes wheelchairMoves {
-    from{
+    0%{
         background-image: url('/images/wheelchair1.png');
-    }to{
+    }40%{
+        background-image: url('/images/wheelchair2.png');
+    }100%{
         background-image: url('/images/wheelchair2.png');
     }
 }
 
+/* #bg{
+    position: absolute;
+    top: 100px;
+    width: 100vw;
+    height: 50px;
+    background-image: url('./images/cityBg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-x;
+    animation: buildings 12s infinite linear;
+} */
+
 #cactus{
+    z-index: 2;
     width: 40px;
     height: 40px;
     position: relative;
@@ -89,6 +120,15 @@
         background-color: rgb(255, 170, 0);
         box-shadow: 0px 0px 10px 0px rgb(255, 170, 0),
         0px 0px 14px 2px rgb(255, 170, 0);
+    }
+}
+
+@keyframes buildings {
+    0%{
+        left: 700px;
+    }
+    100%{
+        left: -700px;
     }
 }
 
